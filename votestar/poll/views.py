@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Question, Choice
 from django.http import HttpResponse, HttpResponseRedirect
+from django.urls import reverse
 
 # Get Question and display them
 
@@ -35,4 +36,4 @@ def vote(request, question_id):
     else:
         selected_choice.votes+=1
         selected_choice.save()
-        return HttpResponseredirect(reverse('poll:results', args=(question.id,)))
+        return HttpResponseRedirect(reverse('poll:result', args=(question.id,)))
