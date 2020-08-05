@@ -6,6 +6,10 @@ from .models import Question,Choice
 #admin.site.register(Question)
 #admin.site.register(Choice)
 
+admin.site.site_header = 'Votestar Admin'
+admin.site.site_title = 'Votestar Admin Area'
+admin.site.site_header = 'Welcome To The Votestar Admin'
+
 class ChoiceInLine(admin,TabularInLine):
     model = Choice
     extra = 3
