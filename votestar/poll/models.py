@@ -9,7 +9,7 @@ class Question(models.Model):
         return self.question_text
 
 class Choice(models.Model):
-    question = models.Foreignkey(Question, on_delete=models.CASCADE) # linking foreighn key to primary key of Question
+    question = models.ForeignKey(Question, on_delete=models.CASCADE) # linking foreighn key to primary key of Question
     choice_text = models.CharField(max_length=200)
     votes = models.IntegerField(default=0)
 
