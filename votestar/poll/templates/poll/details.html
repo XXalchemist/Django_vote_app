@@ -1,4 +1,4 @@
-{% extend 'base.html' %}
+{% extends 'base.html' %}
 {% block content %}
 <a class ='btn btn-secondary' href="{% url 'poll:index' %}"> <- Back To Polls</a>
 <h1 class="text-center mb-3">{{ question.question_text }}</h1>
