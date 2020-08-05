@@ -10,7 +10,7 @@ admin.site.site_header = 'Votestar Admin'
 admin.site.site_title = 'Votestar Admin Area'
 admin.site.site_header = 'Welcome To The Votestar Admin'
 
-class ChoiceInLine(admin,TabularInLine):
+class ChoiceInLine(admin.TabularInline):
     model = Choice
     extra = 3
 class QuestionAdmin(admin.ModelAdmin):
